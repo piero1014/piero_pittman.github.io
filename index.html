@@ -2,150 +2,811 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Piero Pittman| Ingeniería de sistemas embebidos y software</title>
-  <meta name="description" content="Portafolio profesional: microcontroladores en C/C++ y plataformas de software en Python y Java.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piero Pittman | Portafolio de Ingeniería Electrónica, RF & Software</title>
+  <meta name="description" content="Portafolio profesional de Piero Pittman. Especialista en Hardware Engineering, Sistemas Embebidos, Radiofrecuencia (RF), Microondas y Desarrollo de Software Full-Stack.">
+  
+  <!-- Tipografías Tecnológicas -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Fira+Code:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Estilos Principales -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="nav">
-    <a class="brand" href="#inicio">Tu Nombre</a>
-    <nav aria-label="Principal">
-      <a href="#perfil">Perfil</a>
-      <a href="#habilidades">Habilidades</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+  <!-- ==========================================================================
+       BARRA DE NAVEGACIÓN STICKY
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="#perfil" class="brand" aria-label="Ir al perfil de Piero Pittman">
+        <div class="brand-icon">PP</div>
+        <div class="brand-info">
+          <span class="brand-name">Piero Pittman</span>
+          <span class="brand-role">Hardware • RF • Software</span>
+        </div>
+      </a>
+
+      <!-- Enlaces Desktop -->
+      <ul class="nav-links">
+        <li><a href="#perfil" class="nav-link active">Perfil</a></li>
+        <li><a href="#hardware" class="nav-link">Hardware</a></li>
+        <li><a href="#rf" class="nav-link">Radiofrecuencia (RF)</a></li>
+        <li><a href="#software" class="nav-link">Software</a></li>
+        <li><a href="#voluntariados" class="nav-link">Voluntariados</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+
+      <!-- CTA Contactar -->
+      <div class="nav-actions">
+        <a href="#contacto" class="btn-cta">Contactar</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      </div>
+    </div>
+
   </header>
 
   <main>
-    <!-- INICIO -->
-    <section class="hero" id="inicio">
-      <div class="hero-text">
-        <p class="tagline">Sistemas embebidos y software</p>
-        <h1>Código que vuela, mide y responde en tiempo real.</h1>
-        <p class="lead">Programo microcontroladores en C y C++ y desarrollo plataformas de software en Python y Java. Estoy construyendo mi camino hacia sistemas de aviación, defensa y tecnología.</p>
-        <div class="actions">
-          <a class="btn primary" href="#proyectos">Ver proyectos</a>
-          <a class="btn" href="#contacto">Contactar</a>
+    <!-- ==========================================================================
+         SECCIÓN PERFIL / HERO
+         ========================================================================== -->
+    <section class="hero-section" id="perfil">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <span class="pulse-dot"></span>
+            <span class="hero-badge-text">Disponible para Proyectos & Desafíos de Ingeniería</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hola, soy <span class="text-gradient">Piero Pittman</span>
+          </h1>
+          <p class="hero-subtitle">
+            Ingeniero Electrónico &bull; Especialista en Hardware, RF & Software
+          </p>
+          <p class="hero-description">
+            Diseño e implemento soluciones tecnológicas completas: desde arquitectura de circuitos electrónicos impresos (PCBs) y modelado electromagnético de radiofrecuencia (RF) y microondas, hasta plataformas de software robustas y escalables para telecomunicaciones e IoT.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#hardware" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              Explorar Sectores
+            </a>
+            <a href="#contacto" class="btn btn-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Conectar Conmigo
+            </a>
+          </div>
+
+          <!-- Métricas y Capacidades -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-val">3+ Áreas</span>
+              <span class="stat-label">Hardware, RF & Software</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val">Sub-6 GHz & 14 GHz</span>
+              <span class="stat-label">Microondas & VNA FieldFox</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-val">Full-Stack & IoT</span>
+              <span class="stat-label">ESP32, 4G LTE, Python & React</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOTO DE PERFIL TECNOLÓGICA -->
+        <div class="hero-photo-wrapper">
+          <div class="hero-photo-card">
+            <span class="corner-accent corner-tl"></span>
+            <span class="corner-accent corner-tr"></span>
+            <span class="corner-accent corner-bl"></span>
+            <span class="corner-accent corner-br"></span>
+            
+            <div class="photo-inner">
+              <img src="images/Perfil/Foto_perfil.jpeg" alt="Piero Pittman - Foto de Perfil Profesional" loading="eager">
+            </div>
+
+            <div class="photo-tag-badge">
+              <span class="pulse-dot"></span>
+              <span>Lima, Perú &bull; Ingeniero</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="radar" aria-hidden="true">
-        <span class="sweep"></span>
-        <span class="blip b1"></span>
-        <span class="blip b2"></span>
-        <span class="blip b3"></span>
-      </div>
     </section>
 
-    
-    <section class="section" id="perfil">
-      <h2>Perfil profesional</h2>
-      <div class="profile">
-        <!-- Coloca tu foto en: images/perfil/foto.jpg -->
-        <figure class="photo">
-          <img src="images/perfil/foto.jpg" alt="Foto de perfil" onerror="this.remove()">
-        </figure>
-        <div class="profile-text">
-          <p>Escribe aquí una descripción breve: tu formación, qué te apasiona y qué tipo de proyectos buscas. Dos o tres frases claras son suficientes.</p>
-          <p>Estoy en constante aprendizaje y cada proyecto de este repositorio documenta lo que aprendí.</p>
-          <ul class="facts">
-            <li><strong>Formación:</strong> Ingeniería Electrónica</li>
-            <li><strong>Ubicación:</strong> Lima, Perú</li>
-            <li><strong>Interés:</strong> Aviación, defensa y tecnología</li>
-          </ul>
+    <!-- ==========================================================================
+         SECTOR 1: HARDWARE ENGINEERING
+         ========================================================================== -->
+    <section class="section" id="hardware">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">
+            <span class="badge-num">01</span> SECTOR DE ESPECIALIZACIÓN
+          </div>
+          <h2 class="section-title">Hardware Engineering & Sistemas Embebidos</h2>
+          <p class="section-desc">
+            Diseño e integración integral de circuitos impresos (PCBs), sistemas embebidos basados en microcontroladores, adquisición sensorial, módulos celulares 4G LTE y consideraciones de compatibilidad electromagnética (EMC/EMI).
+          </p>
+        </header>
+
+        <!-- Proyectos Hardware (Imágenes Uniformes) -->
+        <div class="projects-grid">
+          <!-- Proyecto 1 -->
+          <article class="project-card">
+            <div class="project-img-box" data-preview="images/Hardware_proyectos/hardware_01.jpeg" data-title="Tarjeta IoT Industrial con Microcontrolador ESP32 y Módem 4G LTE">
+              <img src="images/Hardware_proyectos/hardware_01.jpeg" alt="Tarjeta PCB IoT Industrial con ESP32 y SIM7600G" loading="lazy">
+              <div class="project-img-overlay">
+                <span class="zoom-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Ampliar Vista
+                </span>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Sistemas Embebidos &bull; CITA - UTEC</span>
+              <h3 class="project-name">Tarjeta IoT Industrial de Telemetría 4G LTE</h3>
+              <p class="project-description">
+                Diseño y ensamble de tarjeta de control para el Centro de Investigación y Tecnología del Agua (CITA). Integra microcontrolador ESP32-WROOM-32D, módulo celular SIM7600G para comunicación 4G LTE, conectores para sensores de campo y motores (T1-T3, M1-M3), zócalo microSD y batería RTC de respaldo.
+              </p>
+              <ul class="project-tags">
+                <li class="project-tag">ESP32</li>
+                <li class="project-tag">SIM7600G 4G LTE</li>
+                <li class="project-tag">CITA - UTEC</li>
+                <li class="project-tag">Diseño PCB</li>
+                <li class="project-tag">Telemetría</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="project-card">
+            <div class="project-img-box" data-preview="images/Hardware_proyectos/Hardware_02.JPG" data-title="Diseño y Enrutamiento PCB de Alta Precisión (CAD Layout)">
+              <img src="images/Hardware_proyectos/Hardware_02.JPG" alt="Diseño esquemático y enrutamiento PCB CAD" loading="lazy">
+              <div class="project-img-overlay">
+                <span class="zoom-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Ampliar Vista
+                </span>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Diseño CAD &bull; KiCad EDA</span>
+              <h3 class="project-name">Enrutamiento de Pistas & Planos de Alimentación</h3>
+              <p class="project-description">
+                Modelado y diseño de pistas en circuito impreso multicapa con optimización de planos de masa (GND), separación de señales críticas de alta frecuencia, desacoplamiento de fuentes conmutadas y cumplimiento de reglas de diseño de fabricación (DRC).
+              </p>
+              <ul class="project-tags">
+                <li class="project-tag">KiCad</li>
+                <li class="project-tag">PCB Layout</li>
+                <li class="project-tag">Integridad de Señal</li>
+                <li class="project-tag">DRC & DFM</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Proyecto 3 -->
+          <article class="project-card">
+            <div class="project-img-box" data-preview="images/Hardware_proyectos/Hardware_03.JPG" data-title="Módulo de Control y Acondicionamiento Analógico (Render 3D)">
+              <img src="images/Hardware_proyectos/Hardware_03.JPG" alt="Módulo de Control con Amplificadores Operacionales y Microcontrolador" loading="lazy">
+              <div class="project-img-overlay">
+                <span class="zoom-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Ampliar Vista
+                </span>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Electrónica Analógica & Prototipado</span>
+              <h3 class="project-name">Módulo de Acondicionamiento Analógico & Control</h3>
+              <p class="project-description">
+                Prototipado y modelado 3D de placa embebida orientada a la adquisición de variables analógicas. Incorpora etapas de filtrado activo con amplificadores operacionales en encapsulado DIP-8, regulación de voltaje y acoplamiento para transductores.
+              </p>
+              <ul class="project-tags">
+                <li class="project-tag">Op-Amps</li>
+                <li class="project-tag">Filtrado Activo</li>
+                <li class="project-tag">Render 3D</li>
+                <li class="project-tag">Prototipado</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <!-- Software de Hardware -->
+        <h3 class="subsection-title">Software & Herramientas que Utilizo en Hardware</h3>
+        <div class="software-grid">
+          <!-- KiCad -->
+          <div class="software-card">
+            <div class="software-logo-box">
+              <img src="images/Hardware_Logo_programas/kicad.JPG" alt="KiCad EDA Logo" loading="lazy">
+            </div>
+            <div class="software-info">
+              <h4 class="software-title">KiCad EDA</h4>
+              <p class="software-role">Diseño esquemático y PCB layout multicapa</p>
+            </div>
+          </div>
+
+          <!-- LTspice -->
+          <div class="software-card">
+            <div class="software-logo-box">
+              <img src="images/Hardware_Logo_programas/LTSpice.JPG" alt="LTspice Logo" loading="lazy">
+            </div>
+            <div class="software-info">
+              <h4 class="software-title">LTspice</h4>
+              <p class="software-role">Simulación de circuitos analógicos y potencia</p>
+            </div>
+          </div>
+
+          <!-- MATLAB -->
+          <div class="software-card">
+            <div class="software-logo-box">
+              <img src="images/Hardware_Logo_programas/Matlab.JPG" alt="MATLAB Logo" loading="lazy">
+            </div>
+            <div class="software-info">
+              <h4 class="software-title">MATLAB</h4>
+              <p class="software-role">Modelado matemático, simulación y control</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-   
-    <section class="section" id="habilidades">
-      <h2>Habilidades</h2>
-      <div class="skills">
-        <article>
-          <h3>Microcontroladores</h3>
-          <p>C y C++ para firmware, sensores, comunicaciones y control.</p>
-        </article>
-        <article>
-          <h3>Plataformas de software</h3>
-          <p>Python y Java para aplicaciones, automatización y análisis de datos.</p>
-        </article>
-        <article>
-          <h3>Herramientas</h3>
-          <p>Git y GitHub, depuración, documentación técnica.</p>
-        </article>
+    <!-- ==========================================================================
+         SECTOR 2: INGENIERO DE RADIOFRECUENCIA (RF)
+         ========================================================================== -->
+    <section class="section" id="rf">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">
+            <span class="badge-num">02</span> SECTOR DE ESPECIALIZACIÓN
+          </div>
+          <h2 class="section-title">Ingeniero de Radiofrecuencia (RF) & Microondas</h2>
+          <p class="section-desc">
+            Modelado electromagnético computacional en 3D, síntesis de redes de acoplamiento, diseño de antenas microstrip y validación experimental en laboratorio con instrumental de microondas Keysight FieldFox hasta 14 GHz.
+          </p>
+        </header>
+
+        <!-- Proyectos RF (Imágenes Uniformes) -->
+        <div class="projects-grid">
+          <!-- Proyecto 1 -->
+          <article class="project-card">
+            <div class="project-img-box" data-preview="images/RF_proyectos/RF01.jpg" data-title="Patrón de Radiación 3D de Arreglo Patch 2x2 a 5.25 GHz (Ganancia 9.24 dBi)">
+              <img src="images/RF_proyectos/RF01.jpg" alt="Simulación electromagnética 3D patrón de radiación antena" loading="lazy">
+              <div class="project-img-overlay">
+                <span class="zoom-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Ampliar Vista
+                </span>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Simulación Electromagnética &bull; HFSS</span>
+              <h3 class="project-name">Patrón de Radiación 3D de Arreglo Patch 2x2</h3>
+              <p class="project-description">
+                Simulación computacional de campo lejano de un arreglo planar de antenas microstrip a 5.25 GHz. Obtención de un haz directivo con ganancia máxima de 9.24 dBi, lóbulos secundarios atenuados y alta eficiencia de radiación.
+              </p>
+              <ul class="project-tags">
+                <li class="project-tag">HFSS</li>
+                <li class="project-tag">5.25 GHz</li>
+                <li class="project-tag">Ganancia 9.24 dBi</li>
+                <li class="project-tag">Patrón 3D</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="project-card">
+            <div class="project-img-box" data-preview="images/RF_proyectos/RF02.jpg" data-title="Geometría y Red de Alimentación Corporativa para Arreglo de Antenas">
+              <img src="images/RF_proyectos/RF02.jpg" alt="Diseño de red corporativa de alimentación microstrip" loading="lazy">
+              <div class="project-img-overlay">
+                <span class="zoom-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Ampliar Vista
+                </span>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Síntesis de Circuitos de Microondas</span>
+              <h3 class="project-name">Red de Alimentación Corporativa & Adaptación</h3>
+              <p class="project-description">
+                Diseño analítico de red de distribución en tecnología microstrip. Implementación de divisores de potencia de cuarto de onda (&lambda;/4) para distribución uniforme de corriente y fase, garantizando adaptación precisa a 50 &Omega;.
+              </p>
+              <ul class="project-tags">
+                <li class="project-tag">Microstrip</li>
+                <li class="project-tag">Red Corporativa</li>
+                <li class="project-tag">Transformadores &lambda;/4</li>
+                <li class="project-tag">Adaptación 50 &Omega;</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Proyecto 3 -->
+          <article class="project-card">
+            <div class="project-img-box" data-preview="images/RF_proyectos/RF03.jpeg" data-title="Diseño Top-Assembly y Tolerancias de Fabricación Microstrip">
+              <img src="images/RF_proyectos/RF03.jpeg" alt="Layout CAD de ensamble de antena de microondas" loading="lazy">
+              <div class="project-img-overlay">
+                <span class="zoom-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Ampliar Vista
+                </span>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Modelado CAD de Alta Precisión</span>
+              <h3 class="project-name">Top Assembly y Tolerancias Físicas RF</h3>
+              <p class="project-description">
+                Definición y exportación de geometría física sobre sustrato dieléctrico de bajas pérdidas. Ajuste milimétrico (0.159 mm) para compensar efectos de borde (fringing fields) y acoplamiento parásito entre elementos radiantes contiguos.
+              </p>
+              <ul class="project-tags">
+                <li class="project-tag">CAD RF</li>
+                <li class="project-tag">Sustrato Dieléctrico</li>
+                <li class="project-tag">Microstrip</li>
+                <li class="project-tag">Tolerancias Críticas</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Proyecto 4 -->
+          <article class="project-card">
+            <div class="project-img-box" data-preview="images/RF_proyectos/RF04.jpeg" data-title="Fabricación de Antena Microstrip y Validación con Analizador Vectorial (VNA)">
+              <img src="images/RF_proyectos/RF04.jpeg" alt="Prototipo físico de antena microstrip con conector SMA y FieldFox" loading="lazy">
+              <div class="project-img-overlay">
+                <span class="zoom-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Ampliar Vista
+                </span>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Fabricación & Validación Experimental</span>
+              <h3 class="project-name">Prototipo Físico & Conectorización SMA</h3>
+              <p class="project-description">
+                Fabricación empírica de la antena planar con ensamble de conector coaxial SMA de grado microondas. Conexión directa a analizador Keysight FieldFox para medición de coeficiente de reflexión (S11), ancho de banda y pérdidas.
+              </p>
+              <ul class="project-tags">
+                <li class="project-tag">Prototipo RF</li>
+                <li class="project-tag">Conector SMA</li>
+                <li class="project-tag">VNA FieldFox</li>
+                <li class="project-tag">Medición S11</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Proyecto 5 -->
+          <article class="project-card">
+            <div class="project-img-box" data-preview="images/RF_proyectos/RF05.jpeg" data-title="Medición de Transmisión S21 con Keysight FieldFox N9916A (14 GHz)">
+              <img src="images/RF_proyectos/RF05.jpeg" alt="Medición de Parámetro S21 en analizador Keysight FieldFox N9916A" loading="lazy">
+              <div class="project-img-overlay">
+                <span class="zoom-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Ampliar Vista
+                </span>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Instrumentación Avanzada & Microondas</span>
+              <h3 class="project-name">Caracterización de Transmisión S21 (14 GHz)</h3>
+              <p class="project-description">
+                Validación de respuesta en frecuencia a dos puertos empleando el Keysight FieldFox Microwave Analyzer N9916A. Caracterización de parámetro de transmisión S21 a 2.017 GHz (-5.497 dB) con calibración vectorial precisa.
+              </p>
+              <ul class="project-tags">
+                <li class="project-tag">Keysight N9916A</li>
+                <li class="project-tag">Medición S21</li>
+                <li class="project-tag">Banda 14 GHz</li>
+                <li class="project-tag">Calibración Vectorial</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <!-- Software de RF -->
+        <h3 class="subsection-title">Software & Herramientas que Utilizo en RF</h3>
+        <div class="software-grid">
+          <!-- HFSS -->
+          <div class="software-card">
+            <div class="software-logo-box">
+              <img src="images/RF_Logo_programas/HFSS.JPG" alt="Ansys HFSS Logo" loading="lazy">
+            </div>
+            <div class="software-info">
+              <h4 class="software-title">Ansys HFSS</h4>
+              <p class="software-role">Simulación electromagnética 3D (FEM) y antenas</p>
+            </div>
+          </div>
+
+          <!-- GNU Radio -->
+          <div class="software-card">
+            <div class="software-logo-box">
+              <img src="images/RF_Logo_programas/GnuRadio.JPG" alt="GNU Radio Logo" loading="lazy">
+            </div>
+            <div class="software-info">
+              <h4 class="software-title">GNU Radio</h4>
+              <p class="software-role">Procesamiento de señal y radio definida por software (SDR)</p>
+            </div>
+          </div>
+
+          <!-- MATLAB -->
+          <div class="software-card">
+            <div class="software-logo-box">
+              <img src="images/RF_Logo_programas/Matlab.JPG" alt="MATLAB RF Logo" loading="lazy">
+            </div>
+            <div class="software-info">
+              <h4 class="software-title">MATLAB RF</h4>
+              <p class="software-role">Cartas de Smith, cálculo de arreglos y matrices S</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- PROYECTOS -->
-    <section class="section" id="proyectos">
-      <h2>Proyectos</h2>
-      <div class="projects">
+    <!-- ==========================================================================
+         SECTOR 3: INGENIERO DE SOFTWARE
+         ========================================================================== -->
+    <section class="section" id="software">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">
+            <span class="badge-num">03</span> SECTOR DE ESPECIALIZACIÓN
+          </div>
+          <h2 class="section-title">Ingeniero de Software & Plataformas de Red</h2>
+          <p class="section-desc">
+            Desarrollo full-stack de arquitecturas de software orientadas a telecomunicaciones, automatización de enrutadores de red ISP mediante RouterOS API, paneles de control asíncronos y contenedores listos para la nube.
+          </p>
+        </header>
 
-        <!-- Copia este bloque <article> para agregar más proyectos.
-             Imagen en: images/proyectos/proyecto-1.jpg -->
-        <article class="project">
-          <div class="thumb">
-            <img src="images/proyectos/proyecto-1.jpg" alt="Captura del proyecto 1" onerror="this.remove()">
-          </div>
-          <div class="body">
-            <h3>Nombre del proyecto 1</h3>
-            <p>Describe en una frase qué hace el proyecto y qué problema resuelve.</p>
-            <p class="stack">C++ · Arduino · Sensores</p>
-            <a href="https://github.com/tu-usuario/proyecto-1">Ver código en GitHub</a>
-          </div>
-        </article>
+        <!-- Proyectos Software (Imágenes Uniformes) -->
+        <div class="projects-grid">
+          <!-- Proyecto 1: Panel de Control -->
+          <article class="project-card">
+            <div class="project-img-box" data-preview="images/Software_proyectos/monitoreo_y_gestion_de_clientes_para_ISPs/Panel_de_control.JPG" data-title="MikroTik Manager: Dashboard de Estadísticas del Enrutador CCR2004 en Tiempo Real">
+              <img src="images/Software_proyectos/monitoreo_y_gestion_de_clientes_para_ISPs/Panel_de_control.JPG" alt="Dashboard MikroTik Manager monitoreo de router" loading="lazy">
+              <div class="project-img-overlay">
+                <span class="zoom-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Ampliar Vista
+                </span>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Full-Stack &bull; MikroTik RouterOS API</span>
+              <h3 class="project-name">MikroTik Manager: Dashboard de Monitoreo</h3>
+              <p class="project-description">
+                Panel administrativo en tiempo real para supervisión de routers de borde MikroTik CCR2004-16G-2S+ (arm64, RouterOS 7.24). Permite telemetría instantánea de carga de CPU, consumo de memoria libre (3690 MB), uptime y estado de red.
+              </p>
+              <ul class="project-tags">
+                <li class="project-tag">MikroTik API</li>
+                <li class="project-tag">RouterOS 7</li>
+                <li class="project-tag">CCR2004</li>
+                <li class="project-tag">Telemetría Red</li>
+              </ul>
+            </div>
+          </article>
 
-        <article class="project">
-          <div class="thumb">
-            <img src="images/proyectos/proyecto-2.jpg" alt="Captura del proyecto 2" onerror="this.remove()">
-          </div>
-          <div class="body">
-            <h3>Nombre del proyecto 2</h3>
-            <p>Describe en una frase qué hace el proyecto y qué problema resuelve.</p>
-            <p class="stack">Python · Análisis de datos</p>
-            <a href="https://github.com/tu-usuario/proyecto-2">Ver código en GitHub</a>
-          </div>
-        </article>
+          <!-- Proyecto 2: Gestión de Clientes -->
+          <article class="project-card">
+            <div class="project-img-box" data-preview="images/Software_proyectos/monitoreo_y_gestion_de_clientes_para_ISPs/Panel_de_clientes.JPG" data-title="MikroTik Manager: Aprovisionamiento y Gestión de Clientes PPPoE para ISPs">
+              <img src="images/Software_proyectos/monitoreo_y_gestion_de_clientes_para_ISPs/Panel_de_clientes.JPG" alt="Gestión de clientes PPPoE MikroTik Manager" loading="lazy">
+              <div class="project-img-overlay">
+                <span class="zoom-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Ampliar Vista
+                </span>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Automatización de Redes ISP</span>
+              <h3 class="project-name">Gestión & Aprovisionamiento PPPoE para ISPs</h3>
+              <p class="project-description">
+                Módulo para proveedores de internet (ISPs) que automatiza la administración de abonados: estado en vivo, asignación de IPs (192.168.101.x), planes de ancho de banda (Plan 50, Plan 70), control de ONUs y corte/suspensión inmediata de servicio.
+              </p>
+              <ul class="project-tags">
+                <li class="project-tag">PPPoE</li>
+                <li class="project-tag">Gestión ISP</li>
+                <li class="project-tag">Control ONUs</li>
+                <li class="project-tag">Ancho de Banda</li>
+              </ul>
+            </div>
+          </article>
 
-        <article class="project">
-          <div class="thumb">
-            <img src="images/proyectos/proyecto-3.jpg" alt="Captura del proyecto 3" onerror="this.remove()">
-          </div>
-          <div class="body">
-            <h3>Nombre del proyecto 3</h3>
-            <p>Describe en una frase qué hace el proyecto y qué problema resuelve.</p>
-            <p class="stack">Java · API REST</p>
-            <a href="https://github.com/tu-usuario/proyecto-3">Ver código en GitHub</a>
-          </div>
-        </article>
+          <!-- Proyecto 3: Inicio de Sesión -->
+          <article class="project-card">
+            <div class="project-img-box" data-preview="images/Software_proyectos/monitoreo_y_gestion_de_clientes_para_ISPs/inicio_sesion.JPG" data-title="MikroTik Manager: Autenticación Segura y Control de Acceso por Roles (RBAC)">
+              <img src="images/Software_proyectos/monitoreo_y_gestion_de_clientes_para_ISPs/inicio_sesion.JPG" alt="Módulo de autenticación segura MikroTik Manager" loading="lazy">
+              <div class="project-img-overlay">
+                <span class="zoom-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  Ampliar Vista
+                </span>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="project-category">Seguridad & Arquitectura Web</span>
+              <h3 class="project-name">Autenticación Segura & Control RBAC</h3>
+              <p class="project-description">
+                Portal de inicio de sesión con encriptación de credenciales, tokens de sesión seguros, mitigación contra accesos no autorizados y permisos jerárquicos basados en roles (RBAC) para administradores y operadores técnicos de ISP.
+              </p>
+              <ul class="project-tags">
+                <li class="project-tag">Autenticación</li>
+                <li class="project-tag">RBAC</li>
+                <li class="project-tag">Seguridad Web</li>
+                <li class="project-tag">Control de Acceso</li>
+              </ul>
+            </div>
+          </article>
+        </div>
 
+        <!-- Software de Desarrollo -->
+        <h3 class="subsection-title">Software, Frameworks & Cloud que Utilizo</h3>
+        <div class="software-grid">
+          <!-- React -->
+          <div class="software-card">
+            <div class="software-logo-box">
+              <img src="images/Software_Logo_programas/React.JPG" alt="React Logo" loading="lazy">
+            </div>
+            <div class="software-info">
+              <h4 class="software-title">React</h4>
+              <p class="software-role">Interfaces frontend interactivas y modulares</p>
+            </div>
+          </div>
+
+          <!-- FastAPI -->
+          <div class="software-card">
+            <div class="software-logo-box">
+              <img src="images/Software_Logo_programas/fastAPI.JPG" alt="FastAPI Logo" loading="lazy">
+            </div>
+            <div class="software-info">
+              <h4 class="software-title">FastAPI</h4>
+              <p class="software-role">APIs asíncronas de alto rendimiento en Python</p>
+            </div>
+          </div>
+
+          <!-- Django -->
+          <div class="software-card">
+            <div class="software-logo-box">
+              <img src="images/Software_Logo_programas/Django.JPG" alt="Django Logo" loading="lazy">
+            </div>
+            <div class="software-info">
+              <h4 class="software-title">Django</h4>
+              <p class="software-role">Framework web backend y gestión de bases de datos</p>
+            </div>
+          </div>
+
+          <!-- Spring Boot -->
+          <div class="software-card">
+            <div class="software-logo-box">
+              <img src="images/Software_Logo_programas/SpringBoot.JPG" alt="Spring Boot Logo" loading="lazy">
+            </div>
+            <div class="software-info">
+              <h4 class="software-title">Spring Boot</h4>
+              <p class="software-role">Microservicios y lógica empresarial en Java</p>
+            </div>
+          </div>
+
+          <!-- Docker -->
+          <div class="software-card">
+            <div class="software-logo-box">
+              <img src="images/Software_Logo_programas/docker.JPG" alt="Docker Logo" loading="lazy">
+            </div>
+            <div class="software-info">
+              <h4 class="software-title">Docker</h4>
+              <p class="software-role">Contenedorización, portabilidad y despliegues CI/CD</p>
+            </div>
+          </div>
+
+          <!-- AWS -->
+          <div class="software-card">
+            <div class="software-logo-box">
+              <img src="images/Software_Logo_programas/aws.JPG" alt="AWS Logo" loading="lazy">
+            </div>
+            <div class="software-info">
+              <h4 class="software-title">AWS</h4>
+              <p class="software-role">Infraestructura cloud, EC2, S3 y computación elástica</p>
+            </div>
+          </div>
+
+          <!-- Azure -->
+          <div class="software-card">
+            <div class="software-logo-box">
+              <img src="images/Software_Logo_programas/Azure.JPG" alt="Microsoft Azure Logo" loading="lazy">
+            </div>
+            <div class="software-info">
+              <h4 class="software-title">Azure</h4>
+              <p class="software-role">Soluciones en la nube, autenticación e infraestructura</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- CONTACTO -->
-    <section class="section contact" id="contacto">
-      <h2>Contacto</h2>
-      <p>¿Tienes una oportunidad o quieres colaborar? Escríbeme.</p>
-      <div class="actions">
-        <a class="btn primary" href="mailto:tu-correo@ejemplo.com">tu-correo@ejemplo.com</a>
-        <a class="btn" href="https://github.compiero1014">GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/pieropittman">LinkedIn</a>
+    <!-- ==========================================================================
+         SECTOR 4: VOLUNTARIADOS
+         ========================================================================== -->
+    <section class="section" id="voluntariados">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">
+            <span class="badge-num">04</span> COMUNIDAD & LIDERAZGO
+          </div>
+          <h2 class="section-title">Voluntariados & Contribución a la Comunidad</h2>
+          <p class="section-desc">
+            Participación activa en organizaciones profesionales y comunidades tecnológicas peruanas, promoviendo el conocimiento técnico sobre IoT, hardware embebido y telecomunicaciones.
+          </p>
+        </header>
+
+        <div class="voluntariados-grid">
+          <!-- Voluntariado 1 -->
+          <article class="voluntariado-card">
+            <div class="voluntariado-img-box" data-preview="images/Voluntariado/voluntariado02.jpeg" data-title="Colegio de Ingenieros del Perú (CIP Lima) & Comunidad IoT Perú">
+              <img src="images/Voluntariado/voluntariado02.jpeg" alt="Colegio de Ingenieros del Perú - Capítulo de Ingeniería Electrónica y Comunidad IoT Perú" loading="lazy">
+            </div>
+            <div class="voluntariado-body">
+              <h3 class="voluntariado-title">Colegio de Ingenieros del Perú & Comunidad IoT Perú</h3>
+              <p class="voluntariado-desc">
+                Colaboración e involucramiento en iniciativas técnicas impulsadas por el Consejo Departamental de Lima (Capítulo de Ingeniería Electrónica) junto con la Comunidad IoT Perú. Organización y participación en conferencias presenciales orientadas a difundir tecnologías de automatización, telecomunicaciones e Internet de las Cosas.
+              </p>
+              <ul class="project-tags">
+                <li class="project-tag">Colegio de Ingenieros del Perú (CIP)</li>
+                <li class="project-tag">Comunidad IoT Perú</li>
+                <li class="project-tag">Divulgación Tecnológica</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Voluntariado 2 -->
+          <article class="voluntariado-card">
+            <div class="voluntariado-img-box" data-preview="images/Voluntariado/voluntariado01.jpeg" data-title="Comunidades Tecnológicas y Mentoría Técnica">
+              <img src="images/Voluntariado/voluntariado01.jpeg" alt="Comunidad técnica y equipo de desarrollo tecnológico" loading="lazy">
+            </div>
+            <div class="voluntariado-body">
+              <h3 class="voluntariado-title">Networking Técnico, Mentoría & Innovación</h3>
+              <p class="voluntariado-desc">
+                Espacios de intercambio de conocimientos con ingenieros, desarrolladores e investigadores. Apoyo en la formación técnica de jóvenes talentos, fomentando la experimentación en hardware libre, desarrollo de software y resolución práctica de desafíos de ingeniería.
+              </p>
+              <ul class="project-tags">
+                <li class="project-tag">Mentoría Técnica</li>
+                <li class="project-tag">Innovación Abierta</li>
+                <li class="project-tag">Comunidad Maker</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTOR 5: CONTACTO
+         ========================================================================== -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-badge">
+            <span class="badge-num">05</span> COMUNICACIÓN DIRECTA
+          </div>
+          <h2 class="section-title">Contacto & Redes Profesionales</h2>
+          <p class="section-desc">
+            ¿Tienes en mente un proyecto desafiante, una oportunidad laboral o deseas intercambiar ideas sobre ingeniería de hardware, RF o software? Escríbeme directamente.
+          </p>
+        </header>
+
+        <div class="contact-grid">
+          <!-- Tarjetas de Información Directa -->
+          <div class="contact-info">
+            <!-- Email -->
+            <a href="mailto:piero.pittman@utec.edu.pe" class="contact-card">
+              <div class="contact-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-card-details">
+                <h4>Correo Electrónico</h4>
+                <p>piero.pittman@utec.edu.pe</p>
+              </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/pieropittman" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="contact-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div class="contact-card-details">
+                <h4>LinkedIn</h4>
+                <p>linkedin.com/in/pieropittman</p>
+              </div>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/piero1014" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="contact-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </div>
+              <div class="contact-card-details">
+                <h4>GitHub</h4>
+                <p>github.com/piero1014</p>
+              </div>
+            </a>
+
+            <!-- Ubicación -->
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-card-details">
+                <h4>Ubicación</h4>
+                <p>Lima, Perú &bull; Remoto / Híbrido</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulario Interactivo -->
+          <div class="contact-form-wrap">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="formName" class="form-label">Nombre Completo</label>
+                <input type="text" id="formName" class="form-input" placeholder="Tu nombre o empresa" required>
+              </div>
+
+              <div class="form-group">
+                <label for="formEmail" class="form-label">Correo Electrónico</label>
+                <input type="email" id="formEmail" class="form-input" placeholder="tu-correo@empresa.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="formSubject" class="form-label">Asunto / Área de Interés</label>
+                <input type="text" id="formSubject" class="form-input" placeholder="Ej: Proyecto Hardware Embebido / Consultoría RF" required>
+              </div>
+
+              <div class="form-group">
+                <label for="formMessage" class="form-label">Mensaje</label>
+                <textarea id="formMessage" class="form-textarea" placeholder="Describe brevemente tus requerimientos o consulta técnica..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Enviar Mensaje Directo
+              </button>
+              <div id="formStatus" style="display:none; margin-top: 1rem; font-size: 0.88rem; font-family: var(--font-mono); text-align: center;"></div>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 </p>
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        &copy; 2026 Piero Pittman &bull; Portafolio de Ingeniería
+      </div>
+      <div class="footer-links">
+        <a href="#perfil">Perfil</a>
+        <a href="#hardware">Hardware</a>
+        <a href="#rf">RF</a>
+        <a href="#software">Software</a>
+        <a href="#voluntariados">Voluntariados</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
   </footer>
 
-</body>
-</html>
+  <!-- ==========================================================================
+       LIGHTBOX MODAL PARA VISTA DETALLADA EN ALTA RESOLUCIÓN
+       ========================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Visualizador de Imagen">
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar modal">&times;</button>
+      <div class="lightbox-img-wrap">
+        <img src="" id="lightboxImg" alt="Vista previa en alta resolución">
+      </div>
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
 
+  <!-- Script Interactivo -->
+  <script src="script.js"></script>
 </body>
-
 </html>
