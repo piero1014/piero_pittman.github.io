@@ -1,97 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>María García — Portafolio</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tu Nombre | Ingeniería de sistemas embebidos y software</title>
+  <meta name="description" content="Portafolio profesional: microcontroladores en C/C++ y plataformas de software en Python y Java.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>María García</h1>
+  <header class="nav">
+    <a class="brand" href="#inicio">Tu Nombre</a>
+    <nav aria-label="Principal">
+      <a href="#perfil">Perfil</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
-        <p>
-            Diseñadora / Arquitecta / Fotógrafa
-        </p>
+  <main>
+    <!-- INICIO -->
+    <section class="hero" id="inicio">
+      <div class="hero-text">
+        <p class="tagline">Sistemas embebidos y software</p>
+        <h1>Código que vuela, mide y responde en tiempo real.</h1>
+        <p class="lead">Programo microcontroladores en C y C++ y desarrollo plataformas de software en Python y Java. Estoy construyendo mi camino hacia sistemas de aviación, defensa y tecnología.</p>
+        <div class="actions">
+          <a class="btn primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn" href="#contacto">Contactar</a>
+        </div>
+      </div>
+      <div class="radar" aria-hidden="true">
+        <span class="sweep"></span>
+        <span class="blip b1"></span>
+        <span class="blip b2"></span>
+        <span class="blip b3"></span>
+      </div>
+    </section>
 
-        <a href="#proyectos">
-            Ver proyectos
-        </a>
-    </header>
+    <!-- PERFIL -->
+    <section class="section" id="perfil">
+      <h2>Perfil profesional</h2>
+      <div class="profile">
+        <!-- Coloca tu foto en: images/perfil/foto.jpg -->
+        <figure class="photo">
+          <img src="images/perfil/foto.jpg" alt="Foto de perfil" onerror="this.remove()">
+        </figure>
+        <div class="profile-text">
+          <p>Escribe aquí una descripción breve: tu formación, qué te apasiona y qué tipo de proyectos buscas. Dos o tres frases claras son suficientes.</p>
+          <p>Estoy en constante aprendizaje y cada proyecto de este repositorio documenta lo que aprendí.</p>
+          <ul class="facts">
+            <li><strong>Formación:</strong> Tu carrera o certificaciones</li>
+            <li><strong>Ubicación:</strong> Lima, Perú</li>
+            <li><strong>Interés:</strong> Aviación, defensa y tecnología</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
+    <!-- HABILIDADES -->
+    <section class="section" id="habilidades">
+      <h2>Habilidades</h2>
+      <div class="skills">
+        <article>
+          <h3>Microcontroladores</h3>
+          <p>C y C++ para firmware, sensores, comunicaciones y control.</p>
+        </article>
+        <article>
+          <h3>Plataformas de software</h3>
+          <p>Python y Java para aplicaciones, automatización y análisis de datos.</p>
+        </article>
+        <article>
+          <h3>Herramientas</h3>
+          <p>Git y GitHub, depuración, documentación técnica.</p>
+        </article>
+      </div>
+    </section>
 
-    <main>
+    <!-- PROYECTOS -->
+    <section class="section" id="proyectos">
+      <h2>Proyectos</h2>
+      <div class="projects">
 
-        <section id="proyectos">
+        <!-- Copia este bloque <article> para agregar más proyectos.
+             Imagen en: images/proyectos/proyecto-1.jpg -->
+        <article class="project">
+          <div class="thumb">
+            <img src="images/proyectos/proyecto-1.jpg" alt="Captura del proyecto 1" onerror="this.remove()">
+          </div>
+          <div class="body">
+            <h3>Nombre del proyecto 1</h3>
+            <p>Describe en una frase qué hace el proyecto y qué problema resuelve.</p>
+            <p class="stack">C++ · Arduino · Sensores</p>
+            <a href="https://github.com/tu-usuario/proyecto-1">Ver código en GitHub</a>
+          </div>
+        </article>
 
-            <h2>Proyectos seleccionados</h2>
+        <article class="project">
+          <div class="thumb">
+            <img src="images/proyectos/proyecto-2.jpg" alt="Captura del proyecto 2" onerror="this.remove()">
+          </div>
+          <div class="body">
+            <h3>Nombre del proyecto 2</h3>
+            <p>Describe en una frase qué hace el proyecto y qué problema resuelve.</p>
+            <p class="stack">Python · Análisis de datos</p>
+            <a href="https://github.com/tu-usuario/proyecto-2">Ver código en GitHub</a>
+          </div>
+        </article>
 
+        <article class="project">
+          <div class="thumb">
+            <img src="images/proyectos/proyecto-3.jpg" alt="Captura del proyecto 3" onerror="this.remove()">
+          </div>
+          <div class="body">
+            <h3>Nombre del proyecto 3</h3>
+            <p>Describe en una frase qué hace el proyecto y qué problema resuelve.</p>
+            <p class="stack">Java · API REST</p>
+            <a href="https://github.com/tu-usuario/proyecto-3">Ver código en GitHub</a>
+          </div>
+        </article>
 
-            <article class="proyecto">
+      </div>
+    </section>
 
-                <img src="images/proyecto-01.jpg"
-                     alt="Proyecto 01">
+    <!-- CONTACTO -->
+    <section class="section contact" id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Tienes una oportunidad o quieres colaborar? Escríbeme.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:tu-correo@ejemplo.com">tu-correo@ejemplo.com</a>
+        <a class="btn" href="https://github.com/tu-usuario">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/tu-usuario">LinkedIn</a>
+      </div>
+    </section>
+  </main>
 
-                <h3>Proyecto 01</h3>
+  <footer>
+    <p>© 2026 Tu Nombre. Portafolio alojado en GitHub Pages.</p>
+  </footer>
 
-                <p>
-                    Breve descripción del proyecto.
-                    Explica qué hiciste, cuál era el objetivo
-                    y cuál fue el resultado.
-                </p>
-
-            </article>
-
-
-            <article class="proyecto">
-
-                <img src="images/proyecto-02.jpg"
-                     alt="Proyecto 02">
-
-                <h3>Proyecto 02</h3>
-
-                <p>
-                    Breve descripción de este proyecto.
-                </p>
-
-            </article>
-
-        </section>
-
-
-        <section id="sobre-mi">
-
-            <h2>Sobre mí</h2>
-
-            <p>
-                Soy profesional especializado en...
-                Aquí puedes colocar una pequeña
-                descripción sobre ti.
-            </p>
-
-        </section>
-
-
-        <section id="contacto">
-
-            <h2>Contacto</h2>
-
-            <p>
-                Puedes contactarme en:
-            </p>
-
-            <a href="mailto:tuemail@gmail.com">
-                tuemail@gmail.com
-            </a>
-
-        </section>
-
-    </main>
+</body>
+</html>
 
 </body>
 
